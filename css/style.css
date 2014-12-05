@@ -5,15 +5,23 @@ body {
 }
 
 #container {
-
+	max-width: 75%;
+	margin: 0 auto;
+	background-color: white;
 }
 
 .dashed {
-
+	border-radius: 15px 15px 15px 15px;
+	-moz-border-radius: 15px 15px 15px 15px;
+	-webkit-border-radius: 15px 15px 15px 15px;
+	border: 0px dashed #ed6b6b;
 }
 
 .left-container, .right-container {
-
+	border-radius: 15px 15px 15px 15px;
+	-moz-border-radius: 15px 15px 15px 15px;
+	-webkit-border-radius: 15px 15px 15px 15px;
+	border: 0px solid #1ed147;
 }
 h1 {
 	
