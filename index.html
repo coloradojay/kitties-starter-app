@@ -12,7 +12,6 @@
 
 		<link rel="stylesheet" href="css/normalize.css">
 		<link rel="stylesheet" href="css/style.css">
-		
 		<script src="js/angular.js"></script>
 		<script src="js/main.js"></script>
 		<script src="js/KittiesController.js"></script>
@@ -21,12 +20,39 @@
 	<body>
 	<!-- Used to test the app & controller -->
 	<!-- {{kitties.kittiesList}} -->
+		<header>
+			<h1>Save The Kitties!</h1>
+		</header>
+		<!-- Start Main Container -->
 		<div id="container" ng-controller="KittiesController as kitties">
-			<div></div>
 
+			<section class="left-container">
+			<h1>Adoptable Kitties</h1>
+				<ul>
+					<li ng-class="{'adopted': kitty.adopted | false }" class="dashed" ng-repeat="kitty in kitties.kittiesList">
+						{{ kitty.catName }},
+						{{ kitty.monthsOld }},
+						{{ kitty.gender }}
+						<img ng-src="{{kitty.image}}"><br>
+						<input type="checkbox" ng-model="kitty.adopted">
+					</li>
+				</ul>
+			</section><!-- End left Container -->
 
+			<section class="right-container">
+			<h1>Adopted Kitties</h1>
+				<ul>
+					<li ng-class="{'adopted: kitty.adopted | true }" class="dashed" ng-repeat="kitty in kitties.kittiesList">
+						{{ kitty.catName }},
+						{{ kitty.monthsOld }},
+						{{ kitty.gender }}
+						<img ng-src="{{kitty.image}}"><br>
+						<input type="checkbox" ng-model="kitty.adopted">
+					</li>
+				</ul>
+			</section><!-- End Right Container -->
 
-		</div>
+		</div> <!-- End Main Container -->
 
 	</body>
 </html>
