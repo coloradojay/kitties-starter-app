@@ -10,7 +10,7 @@ angular
 				monthsOld: 5,
 				gender: 'boy',
 				image: "images/carl.png",
-				adopted: true,
+				adopted: true
 			},
 			{
 				catName: 'Jack',

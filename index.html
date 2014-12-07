@@ -11,7 +11,9 @@
 		<![endif]-->
 
 		<link rel="stylesheet" href="css/normalize.css">
+		<link href='http://fonts.googleapis.com/css?family=Abril+Fatface' rel='stylesheet' type='text/css'>
 		<link rel="stylesheet" href="css/style.css">
+
 		<script src="js/angular.js"></script>
 		<script src="js/main.js"></script>
 		<script src="js/KittiesController.js"></script>
@@ -29,12 +31,12 @@
 			<section class="left-container">
 			<h1>Adoptable Kitties</h1>
 				<ul>
-					<li ng-class="{'adopted': kitty.adopted | false }" class="dashed" ng-repeat="kitty in kitties.kittiesList">
+					<li class="dashed" ng-repeat="kitty in kitties.kittiesList | filter:kitty.adopted=false">
 						{{ kitty.catName }},
 						{{ kitty.monthsOld }},
 						{{ kitty.gender }}
 						<img ng-src="{{kitty.image}}"><br>
-						<input type="checkbox" ng-model="kitty.adopted">
+						<input type="checkbox" ng-model="kitties.adopted">
 					</li>
 				</ul>
 			</section><!-- End left Container -->
@@ -42,12 +44,12 @@
 			<section class="right-container">
 			<h1>Adopted Kitties</h1>
 				<ul>
-					<li ng-class="{'adopted: kitty.adopted | true }" class="dashed" ng-repeat="kitty in kitties.kittiesList">
+					<li class="dashed" ng-repeat="kitty in kitties.kittiesList | filter:kitty.adopted=true">
 						{{ kitty.catName }},
 						{{ kitty.monthsOld }},
 						{{ kitty.gender }}
 						<img ng-src="{{kitty.image}}"><br>
-						<input type="checkbox" ng-model="kitty.adopted">
+						<input type="checkbox" ng-model="kitties.adopted">
 					</li>
 				</ul>
 			</section><!-- End Right Container -->
