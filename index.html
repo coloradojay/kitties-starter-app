@@ -27,32 +27,34 @@
 		</header>
 		<!-- Start Main Container -->
 		<div id="container" ng-controller="KittiesController as kitties">
-
-			<section class="left-container">
+			<div class="left-container">
 			<h1>Adoptable Kitties</h1>
 				<ul>
 					<li class="dashed" ng-repeat="kitty in kitties.kittiesList | filter:kitty.adopted=false">
 						{{ kitty.catName }},
 						{{ kitty.monthsOld }},
 						{{ kitty.gender }}
-						<img ng-src="{{kitty.image}}"><br>
+						<br />
+						<img ng-src="{{kitty.image}}"><br />
 						<input type="checkbox" ng-model="kitties.adopted">
 					</li>
 				</ul>
-			</section><!-- End left Container -->
+			</div><!-- End left Container -->
 
-			<section class="right-container">
+			<div class="right-container">
 			<h1>Adopted Kitties</h1>
 				<ul>
 					<li class="dashed" ng-repeat="kitty in kitties.kittiesList | filter:kitty.adopted=true">
 						{{ kitty.catName }},
 						{{ kitty.monthsOld }},
 						{{ kitty.gender }}
-						<img ng-src="{{kitty.image}}"><br>
-						<input type="checkbox" ng-model="kitties.adopted">
+						<br />
+						<img ng-src="{{kitty.image}}"><br />
+						<input type="checkbox" ng-model="kitties.adopted" ng-click="
+		show.adopted = true">
 					</li>
 				</ul>
-			</section><!-- End Right Container -->
+			</div><!-- End Right Container -->
 
 		</div> <!-- End Main Container -->
 

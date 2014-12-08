@@ -5,23 +5,45 @@ body {
 	font-family: 'Abril Fatface', cursive;
 }
 
-header > h1 {
-	margin: 0;
+h1 {
+	text-align: center;
 }
 
 #container {
-	margin: 0 auto;
 	width: 700px;
+	margin: 0 auto;
+	background-color: white;
 }
 
-.left-container, .right-container {
+ul {
+	margin: 0;
+	padding: 0;
+}
+li {
+	text-align: center;
+	list-style: none;
+}
+
+.left-container {
+	float: left;
 	border-radius: 15px 15px 15px 15px;
 	-moz-border-radius: 15px 15px 15px 15px;
 	-webkit-border-radius: 15px 15px 15px 15px;
 	border: 1px solid #1ed147;
 	display: inline-block;
-	width: 325px;
-	min-height: 150px;
+	width: 45%;
+	background-color: white;
+	margin: 10px 10px 10px 10px;
+}
+
+.right-container {
+	float: right;
+	border-radius: 15px 15px 15px 15px;
+	-moz-border-radius: 15px 15px 15px 15px;
+	-webkit-border-radius: 15px 15px 15px 15px;
+	border: 1px solid #1ed147;
+	display: inline-block;
+	width: 45%;
 	background-color: white;
 	margin: 10px 10px 10px 10px;
 }
@@ -31,24 +53,4 @@ header > h1 {
 	-moz-border-radius: 15px 15px 15px 15px;
 	-webkit-border-radius: 15px 15px 15px 15px;
 	border: 2px dashed #ed6b6b;
-}
-
-.adopted {
-/*  display: block!important;
-  position: absolute;
-  top: -9999px;
-  left: -9999px;*/
-}
-
-h1 {
-	text-align: center;
-}
-ul {
-	margin: 0;
-	padding: 0;
-}
-li {
-	display: block;
-	margin: 0 auto;
-	list-style: none;
 }
