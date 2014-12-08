@@ -2,15 +2,17 @@
 
 body {
 	background-image: url(../images/background.png);
-	font-family: 'Abril Fatface', cursive;
+	font-family: 'Cuprum', sans-serif;
 }
 
 h1 {
 	text-align: center;
+	font-size: 48px;
+	margin: 0;
 }
 
 #container {
-	width: 700px;
+	width: 900px;
 	margin: 0 auto;
 	background-color: white;
 }
@@ -19,9 +21,21 @@ ul {
 	margin: 0;
 	padding: 0;
 }
+
+h2 {
+	text-align: center;
+	font-family: 'Pacifico', cursive;
+}
+
+h3 {
+	text-align: center;
+	font-family: 'Lobster', cursive;
+}
 li {
 	text-align: center;
 	list-style: none;
+	padding: 5px 5px;
+	margin: 10px 10px;
 }
 
 .left-container {

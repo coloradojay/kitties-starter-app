@@ -11,7 +11,9 @@
 		<![endif]-->
 
 		<link rel="stylesheet" href="css/normalize.css">
-		<link href='http://fonts.googleapis.com/css?family=Abril+Fatface' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Cuprum:700' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
 		<link rel="stylesheet" href="css/style.css">
 
 		<script src="js/angular.js"></script>
@@ -28,30 +30,29 @@
 		<!-- Start Main Container -->
 		<div id="container" ng-controller="KittiesController as kitties">
 			<div class="left-container">
-			<h1>Adoptable Kitties</h1>
+			<h2>Kitties for Adoption</h2>
 				<ul>
 					<li class="dashed" ng-repeat="kitty in kitties.kittiesList | filter:kitty.adopted=false">
-						{{ kitty.catName }},
-						{{ kitty.monthsOld }},
-						{{ kitty.gender }}
+						<h3>My name is {{ kitty.catName }}</h3>
+						I am {{ kitty.monthsOld }} months old.<br />
+						I am a {{ kitty.gender }}.
 						<br />
 						<img ng-src="{{kitty.image}}"><br />
-						<input type="checkbox" ng-model="kitties.adopted">
+						Adopt? <input type="checkbox" ng-model="kitties.adopted">
 					</li>
 				</ul>
 			</div><!-- End left Container -->
 
 			<div class="right-container">
-			<h1>Adopted Kitties</h1>
+			<h2>At their forever homes <3</h2>
 				<ul>
 					<li class="dashed" ng-repeat="kitty in kitties.kittiesList | filter:kitty.adopted=true">
-						{{ kitty.catName }},
-						{{ kitty.monthsOld }},
-						{{ kitty.gender }}
+						<h3>My name is {{ kitty.catName }}</h3>
+						I am {{ kitty.monthsOld }} months old.<br />
+						I am a {{ kitty.gender }}.
 						<br />
 						<img ng-src="{{kitty.image}}"><br />
-						<input type="checkbox" ng-model="kitties.adopted" ng-click="
-		show.adopted = true">
+						Adopt? <input type="checkbox" ng-model="kitties.adopted">
 					</li>
 				</ul>
 			</div><!-- End Right Container -->
