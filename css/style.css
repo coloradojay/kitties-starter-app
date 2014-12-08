@@ -14,7 +14,7 @@ h1 {
 #container {
 	width: 900px;
 	margin: 0 auto;
-	background-color: white;
+/*	background-color: white;*/
 }
 
 ul {
@@ -39,7 +39,7 @@ li {
 }
 
 .left-container {
-	float: left;
+/*	float: left;*/
 	border-radius: 15px 15px 15px 15px;
 	-moz-border-radius: 15px 15px 15px 15px;
 	-webkit-border-radius: 15px 15px 15px 15px;
@@ -48,10 +48,11 @@ li {
 	width: 45%;
 	background-color: white;
 	margin: 10px 10px 10px 10px;
+	vertical-align: top;
 }
 
 .right-container {
-	float: right;
+	/*float: right;*/
 	border-radius: 15px 15px 15px 15px;
 	-moz-border-radius: 15px 15px 15px 15px;
 	-webkit-border-radius: 15px 15px 15px 15px;
@@ -60,6 +61,7 @@ li {
 	width: 45%;
 	background-color: white;
 	margin: 10px 10px 10px 10px;
+	vertical-align: top;
 }
 
 .dashed {

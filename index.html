@@ -21,24 +21,24 @@
 		<script src="js/KittiesController.js"></script>
 	</head>
 
-	<body>
+	<body ng-controller="KittiesController as kitties">
 	<!-- Used to test the app & controller -->
 	<!-- {{kitties.kittiesList}} -->
 		<header>
 			<h1>Save The Kitties!</h1>
 		</header>
 		<!-- Start Main Container -->
-		<div id="container" ng-controller="KittiesController as kitties">
+		<div id="container" >
 			<div class="left-container">
 			<h2>Kitties for Adoption</h2>
 				<ul>
-					<li class="dashed" ng-repeat="kitty in kitties.kittiesList | filter:kitty.adopted=false">
+					<li class="dashed" ng-repeat="kitty in kitties.kittiesList | filter: {adopted:false}">
 						<h3>My name is {{ kitty.catName }}</h3>
 						I am {{ kitty.monthsOld }} months old.<br />
 						I am a {{ kitty.gender }}.
 						<br />
 						<img ng-src="{{kitty.image}}"><br />
-						Adopt? <input type="checkbox" ng-model="kitties.adopted">
+						Adopt? <input type="checkbox" ng-model = "kitty.adopted">
 					</li>
 				</ul>
 			</div><!-- End left Container -->
@@ -46,13 +46,13 @@
 			<div class="right-container">
 			<h2>At their forever homes <3</h2>
 				<ul>
-					<li class="dashed" ng-repeat="kitty in kitties.kittiesList | filter:kitty.adopted=true">
+					<li class="dashed" ng-repeat="kitty in kitties.kittiesList | filter: {adopted:true}">
 						<h3>My name is {{ kitty.catName }}</h3>
 						I am {{ kitty.monthsOld }} months old.<br />
 						I am a {{ kitty.gender }}.
 						<br />
 						<img ng-src="{{kitty.image}}"><br />
-						Adopt? <input type="checkbox" ng-model="kitties.adopted">
+						Adopt? <input type="checkbox" ng-model="kitty.adopted">
 					</li>
 				</ul>
 			</div><!-- End Right Container -->
